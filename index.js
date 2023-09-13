@@ -222,3 +222,29 @@ function openFirstPage(){
 
 }
 
+const inputField = document.getElementById('myInput');
+const characterCount = document.getElementById('characterCount');
+    const maxLength = 15;
+    inputField.addEventListener('input', function() {
+        const inputLength = inputField.value.length;
+  
+        if (inputLength > maxLength) {
+          inputField.value = inputField.value.slice(0, maxLength); // Truncate input
+        }
+  
+        characterCount.textContent = `Characters: ${inputLength} / ${maxLength}`;
+      });
+
+//2nd Popup
+      const inputField2 = document.getElementById('myInput1');
+      const characterCount2 = document.getElementById('characterCount');
+          const maxLength2 = 15;
+          inputField2.addEventListener('input', function() {
+              const inputLength = inputField2.value.length;
+        
+              if (inputLength > maxLength) {
+                inputField2.value = inputField2.value.slice(0, maxLength); // Truncate input
+              }
+        
+              characterCount.textContent = `Characters: ${inputLength} / ${maxLength}`;
+            });   
